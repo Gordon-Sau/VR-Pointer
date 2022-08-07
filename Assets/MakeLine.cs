@@ -6,12 +6,14 @@ public class MakeLine : MonoBehaviour
 {
     public GameObject linePrefab; // for instantiating the line
     private LineController lineController = null;
+    private GameObject line = null;
 
     private Transform currPoint = null;
 
     public void addPoint(Transform point) {
         if (lineController == null) {
-            lineController = Instantiate<GameObject>(linePrefab, Vector3.zero, Quaternion.identity).GetComponent<LineController>();
+            line = Instantiate<GameObject>(linePrefab, Vector3.zero, Quaternion.identity);
+            lineController = line.GetComponent<LineController>();
             lineController.addDot(point);
             currPoint = point;
         } else {
@@ -27,7 +29,7 @@ public class MakeLine : MonoBehaviour
         if (currPoint == point) {
             currPoint.gameObject.GetComponent<ClickDot>().cancelClick();
             currPoint = null;
-            Destroy(lineController);
+            Destroy(line);
             lineController = null;
         } else {
             Debug.Log("different point! Cannot cancelPoint!");
