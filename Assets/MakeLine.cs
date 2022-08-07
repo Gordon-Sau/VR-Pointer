@@ -31,6 +31,7 @@ public class MakeLine : MonoBehaviour
             currPoint = null;
             Destroy(line);
             lineController = null;
+            line = null;
         } else {
             Debug.Log("different point! Cannot cancelPoint!");
         }
