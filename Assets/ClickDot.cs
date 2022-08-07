@@ -29,13 +29,12 @@ public class ClickDot : MonoBehaviour
             lineMaker.addPoint(this.transform);
         } else {
             cancelClick();
+            lineMaker.cancelPoint(this.transform);
         }
     }
 
     public void cancelClick() {
         isClicked = false;
         dotRenderer.material.SetColor("_Color", originalColor);
-        lineMaker.cancelPoint(this.transform);
     }
-
 }
