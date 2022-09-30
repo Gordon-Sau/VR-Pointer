@@ -704,7 +704,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -740,7 +740,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1518114400}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor,
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRRayInteractor,
             Unity.XR.Interaction.Toolkit
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 4294967295
   m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
+  m_KeepSelectedTargetValid: 0
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -1520,6 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64520564d99cec4b851eaa07b73dc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactor: {fileID: 1518114400}
   dotPrefab: {fileID: 186891829737801529, guid: b1ea2e4678b02ae489739a67da7d5153,
     type: 3}
   lineMaker: {fileID: 1940831317}

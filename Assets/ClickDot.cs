@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ClickDot : MonoBehaviour
 {
@@ -18,7 +20,13 @@ public class ClickDot : MonoBehaviour
         lineMaker = makeLine;
     }
 
-    public void onDotClick(RaycastHit hit) {
+    public void cancelClick() {
+        isClicked = false;
+        dotRenderer.material.SetColor("_Color", originalColor);
+    }
+
+    public void TriggerClick() {
+        Debug.Log("Dot gets triggered by pointer");
         isClicked = !isClicked;
         if (isClicked) {
             dotRenderer.material.SetColor("_Color", Color.red);
@@ -27,10 +35,5 @@ public class ClickDot : MonoBehaviour
             cancelClick();
             lineMaker.cancelPoint(this.transform);
         }
-    }
-
-    public void cancelClick() {
-        isClicked = false;
-        dotRenderer.material.SetColor("_Color", originalColor);
     }
 }

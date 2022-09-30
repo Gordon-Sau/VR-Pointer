@@ -12,13 +12,8 @@ public class HMDInfoManager : MonoBehaviour
         if (!XRSettings.isDeviceActive) {
             Debug.Log("Fail to load device");
         } else {
-            Debug.Log(XRSettings.loadedDeviceName);
+            Debug.Log("loaded device name: "+ XRSettings.loadedDeviceName);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
