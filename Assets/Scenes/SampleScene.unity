@@ -737,7 +737,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1542467485}
         m_TargetAssemblyTypeName: PointerInteract, Assembly-CSharp
         m_MethodName: TriggerClick
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1519,7 +1519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64520564d99cec4b851eaa07b73dc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactor: {fileID: 1518114400}
   dotPrefab: {fileID: 186891829737801529, guid: b1ea2e4678b02ae489739a67da7d5153,
     type: 3}
   lineMaker: {fileID: 1940831317}

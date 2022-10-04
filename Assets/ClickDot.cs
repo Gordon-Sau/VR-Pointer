@@ -16,7 +16,7 @@ public class ClickDot : MonoBehaviour
         originalColor = dotRenderer.material.GetColor("_Color");
     }
 
-    public void SetLineMaker(MakeLine makeLine) {
+    private void SetLineMaker(MakeLine makeLine) {
         lineMaker = makeLine;
     }
 
@@ -35,5 +35,10 @@ public class ClickDot : MonoBehaviour
             cancelClick();
             lineMaker.cancelPoint(this.transform);
         }
+    }
+
+    static public void createDot(GameObject dotPrefab, Vector3 point, Quaternion rotation, Transform parent, MakeLine makeLine) {
+        GameObject dot = Instantiate<GameObject>(dotPrefab, point, rotation, parent);
+        dot.GetComponent<ClickDot>().SetLineMaker(makeLine);
     }
 }
